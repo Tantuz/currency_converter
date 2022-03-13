@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Currency converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <form action="" class="form">
+          <h1 class="heading">Currency converter</h1>
+          <div class="converter">
+            <div class="sell">
+              <label for="name"></label>
+              <select name="" class="form-control" id="sell-select">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="RUB">RUB</option>
+                <option value="CNY">CNY</option>
+                <option value="BYN">BYN</option>
+              </select>
+              <input
+                type="number"
+                min="0"
+                step="any"
+                oninput="validity.valid || (value='');"
+                class="red-border"
+                id="input-sell"
+                placeholder="Enter a sum"
+              />
+            </div>
+            <div class="converter-img">
+              <button
+                id="converter-btn"
+                onclick="event.preventDefault()"
+                type="button"
+              >
+                <img src="./assets/exchange.png" alt="converter-img" />
+              </button>
+            </div>
+            <div id="buy"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
